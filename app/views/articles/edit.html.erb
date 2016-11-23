@@ -1,0 +1,11 @@
+<div class="editor-form">
+	<%= form_for @article, html: { multipart: true } do |f| %>
+		<%= f.text_field :author, :value => @article.author %> 
+		<%= f.text_field :title, :value => @article.title %>
+		<%= f.text_field :category, :placeholder => 'category', :value => @article.category %>
+		<%= f.text_field :description, :value => @article.description %>
+		<%= f.file_field :image, :value => @article.image, :id => 'upload' %>
+		<%= f.text_area :body, :value => @article.body, :id => 'body' %>
+		<%= f.submit 'Edit', :id => "submit-new" %> 
+	<% end %> 
+</div> 

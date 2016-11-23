@@ -1,0 +1,568 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+a {
+	text-decoration: none; 
+	color: black;  
+}
+
+.mobile-only {
+	display: none; 
+}
+
+.editor-options ul {
+	list-style-type: none; 
+	padding: 0; 
+}
+
+.editor-options li {
+	display: inline; 
+	border: 1px solid #607F67; 
+	padding: 5px 10px; 
+	margin: 0 10px; 
+	cursor: pointer; 
+}
+
+.editor-options li a {
+	cursor: pointer; 
+}
+
+/* Home's main article */ 
+
+.hero-wrapper {
+	width: 100%;
+	min-height: 400px;
+	padding: 25px 15px;  
+	display: flex; 
+	cursor: pointer; 
+	justify-content: center; 
+	transition: margin 1s;
+}
+
+.illustration {
+	width: 60%; 
+	max-height: 400px;
+	min-height: 350px;  
+	overflow: hidden; 
+}
+
+.illustration img {
+	width: 100%;
+	height: auto;  
+}
+
+.details {
+	width: 40%; 
+	height: 300px; 
+	text-align: center; 
+	padding-top: 6%; 
+	transition: margin 1s;
+}
+
+.details h1 {
+	font-size: 35px; 
+	width: 90%; 
+	margin: auto; 
+	line-height: 30px; 
+	padding: 0 10px; 
+}
+
+.details p {
+	font-weight: 300; 
+	padding: 0 15px; 
+}
+
+#light {
+	color: #666; 
+	opacity: 0.7; 
+}
+
+#tag {
+	font-family: 'Lora', serif;
+	font-weight: 700; 
+	font-size: 25px; 
+}
+
+#categ {
+	color: #607F67; 
+	font-size: 25px; 
+}
+
+.title {
+	text-align: center;
+	width: 100%; 
+	padding: 20px 0; 
+	transition: margin 1s;
+}
+
+.title h6 {
+	margin: auto;  
+	font-family: 'Lora', serif;
+	font-size: 55px; 
+	font-weight: 400; 
+	letter-spacing: 4px; 
+}
+
+/* Indexed articles */ 
+
+.articles {
+	width: 100%; 
+	height: auto;  
+	padding: 0; 
+	display: flex; 
+	flex-wrap: wrap; 
+	transition: margin 1s;
+	justify-content: center; 
+}
+
+.articles a {
+	width: 30%; 
+	min-width: 25%; 
+	height: 300px; 
+	text-align: center; 
+	margin-right: 0; 
+	padding: 10px; 
+	margin-bottom: 5%; 
+}
+
+.image {
+	width: 100%; 
+	height: 65%; 
+}
+
+.image img {
+	width: 100%; 
+	height: 100%; 
+	margin: auto; 
+}
+
+#cat {
+	font-size: 20px; 
+	color: #607F67;
+	padding-top: 10px; 
+	font-weight: 400; 
+}
+
+.article-wrapper h1, .article-wrapper p {
+	margin: auto; 
+}
+
+.article-wrapper h1 {
+	font-size: 16px; 
+	padding: 10px 0 5px 0; 
+}
+
+.article-wrapper p {
+	font-size: 13px; 
+	font-weight: 300; 
+}
+
+.next {
+	width: 100%; 
+	height: 100px; 
+	text-align: center; 
+}
+
+.next button {
+	width: 300px; 
+	height: 50px;
+	margin: 32px auto; 
+	background: transparent; 
+	border: 1px solid black; 
+	padding: 10px 50px; 
+	font-size: 20px; 
+	font-weight: 300; 
+	letter-spacing: 3px; 
+}
+
+.next a {
+	color: #607F67; 
+	width: 100%; 
+	height: 100%; 
+}
+
+.next a:hover {
+	color: black; 
+}
+
+/* Newsletter */ 
+
+.newsletter {
+	width: 100%; 
+	height: 100px; 
+	padding: 30px 0; 
+	text-align: center; 
+	transition: margin 1s;
+}
+
+.newsletter form {
+	margin: auto; 
+	text-align: center; 
+}
+
+.newsletter input {
+	margin: 20px auto; 
+}
+
+#email {
+	width: 350px; 
+	padding-left: 5px; 
+	height: 30px; 
+	border: 1px solid #607F67; 
+}
+
+#singup {
+	background: black; 
+	border: none; 
+	color: #607F67; 
+	width: 100px; 
+	height: 40px; 
+	padding: 10px 20px; 
+	border-radius: 3px; 
+	text-transform: uppercase; 
+	cursor: pointer; 
+}
+
+#singup:hover {
+	background: #607F67; 
+	color: black; 
+	transition: background 0.7s ease-out; 
+}
+
+/* Editor's form */ 
+
+.editor-form {
+	width: 100%; 
+	height: auto; 
+	padding: 20px; 
+	text-align: center; 
+}
+
+.editor-form form {
+	margin: auto; 
+}
+
+.editor-form form input {
+	width: 700px; 
+	margin: 20px auto; 
+	border: 1px solid #666;
+	display: block; 
+}
+
+#upload {
+	border: none; 
+	}
+
+#body {
+	width: 700px; 
+	height: 500px; 
+	margin: 20px auto; 
+}
+
+#submit-new {
+	width: 250px; 
+	height: 30px; 
+	background: black; 
+	color: #607F67; 
+	margin: auto; 
+	border: none; 
+	cursor: pointer; 
+}
+
+#submit-new:hover {
+	background: #607F67; 
+	color: black;
+	transition: background 1s ease-out;  
+}
+
+/* Article layout */ 
+
+.page-wrapper {
+	display: flex; 
+	justify-content: space-between; 
+	width: 100%; 
+	height: auto; 
+}
+
+.post-wrapper {
+	width: 70%; 
+	height: auto; 
+}
+
+.article-header h5 {
+	font-size: 16px; 
+	margin-bottom: 5px; 
+	color: #607F67; 
+}
+
+.article-header h1 {
+	margin-top: 5px; 
+	margin-bottom: 5px;  
+}
+
+.article-header p {
+	margin-top: 5px;  
+}
+
+.post-wrapper .article-image {
+	width: 100%; 
+	height: auto; 
+}
+
+.article-image img {
+	width: 100%; 
+	height: auto; 
+}
+
+.article-body {
+	width: 100%; 
+	height: auto; 
+	padding-top: 30px; 
+}
+
+.article-body p {
+	line-height: 25px; 
+}
+
+.suggestions-wrapper {
+	width: 25%; 
+	height: auto; 
+	border-left: 1px solid #607F67;
+	border-bottom: 1px solid #607F67;
+	margin-top: 100px; 
+}
+
+.suggestions-title {
+	text-align: center; 
+}
+
+.suggestions-title p {
+	font-size: 35px; 
+	font-family: 'Lora', serif;
+	padding: 0; 
+	margin: 0; 
+}
+
+.suggestion {
+	text-align: center; 
+	margin-bottom: 30px; 
+}
+
+.suggestion img {
+	width: 65%; 
+	height: auto; 
+}
+
+/* Search results page */ 
+
+.results-wrapper {
+	width: 100%; 
+	height: auto; 
+}
+
+.result {
+	display: flex; 
+	width: 100%; 
+	height: auto; 
+	justify-content: space-between; 
+}
+
+.result .pic {
+	width: 35%; 
+	height: 100%; 
+	padding: 20px; 
+}
+
+.result .pic img {
+	width: 100%; 
+	height: auto; 
+}
+
+.card {
+	width: 65%; 
+	padding: 20px 20px 20px 0; 
+}
+
+.card p, .card h1 {
+	margin: 5px; 
+	width: 100%; 
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+	
+	.card h1 {
+		font-size: 21px; 
+	}
+
+	.card p {
+		font-size: 13px; 
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.hero-wrapper {
+		display: block; 
+		height: 500px; 
+		min-height: 100px; 
+		padding: 0 0 25px 0; 
+		text-align: center; 
+	}
+
+	.illustration, .details {
+		margin: auto; 
+		width: 100%;
+	}
+
+	.illustration { 
+		height: auto; 
+		min-height: 100px; 
+	}
+
+	.details {
+		padding: 5px 0; 
+		height: 100px; 
+	}
+
+	 #description {
+	 	display: none; 
+	 }
+
+	.details h1 {
+		font-size: 30px; 
+	}
+
+	.details p {
+		font-size: 20px; 
+	}
+
+	.articles .article-wrapper {
+		margin: auto; 
+	}
+	
+	.articles {
+		justify-content: center; 
+		text-align: center; 
+	}
+
+	.articles a {
+		min-width: 40%; 
+		height: 300px;  
+		margin-bottom: 1%; 
+	}
+
+	.mobile-only {
+		display: block; 
+		width: 40%; 
+	}
+
+	.page-wrapper {
+		display: block; 
+	}
+
+	.post-wrapper {
+		width: 100%; 
+	}
+
+	.suggestions-wrapper {
+		display: none; 
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+
+	.newsletter {
+		height: 130px; 
+	}
+	
+	#email {
+		width: 100%; 
+	}
+
+	.newsletter input {
+		margin: 10px auto; 
+	}
+
+	.result {
+		display: block;  
+		width: 100%; 
+		margin-bottom: 50px; 
+	}
+
+	.result .pic {
+		width: 100%; 
+		margin: auto; 
+		padding: 0; 
+	}
+
+	.card {
+		width: 100%; 
+		margin: auto; 
+		padding: 0; 
+	}
+
+	.pic img {
+		width: 100%; 
+		height: auto; 
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+
+	.articles {
+		justify-content: center; 
+	}
+	
+	.articles a {
+		min-width: 90%; 
+		height: 400px;  
+		margin-bottom: 2%; 
+	}
+
+	.article-wrapper {
+		text-align: center;
+		margin: 0; 
+		padding: 0;  
+		margin-left: -30px; 
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+	
+	.title h6 {
+		font-size: 40px; 
+	}
+
+	.articles a {
+		height: 350px;  
+	}
+
+	.hero-wrapper {
+		padding-bottom: 0; 
+		height: 400px; 
+	}
+
+	.next {
+		height: 70px; 
+	}
+
+	.next button {
+		margin: 5px auto; 
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<div class="page-wrapper">
+	<div class="post-wrapper">
+		<div class="article-header">
+			<h5><%= @article.category %></h5> 
+			<h1><%= @article.title %></h1>
+			<p>By <%= @article.author %>, <%= @article.created_at.strftime('%b %d') %>, <%= @article.created_at.strftime('%Y') %></p> 
+		</div>
+		<div class="article-image">
+			<%= image_tag @article.image %>
+		</div>
+		<div class="article-body">
+			<p style="white-space: pre-line;"><%= @article.body %></p>
+		</div>
+		<div class="editor-options">
+			<% if editor_signed_in? && current_editor.role == 'Admin' %> 
+			<ul>
+				<li><%= link_to 'Edit', edit_article_path %></li>
+				<li><%= link_to 'Delete', article_path, method: 'delete' %></li>
+				<li><%= link_to 'New Article', new_post_path %></li>
+			</ul>
+			<% elsif editor_signed_in? %>
+			<ul class="editor-options">
+				<li><%= link_to 'Edit', edit_article_path %></li>
+				<li><%= link_to 'New Article', new_post_path %></li>
+			</ul> 
+			<% end %>
+		</div>
+	</div>
+
+	<div class="suggestions-wrapper">
+		<div class="suggestions-title">
+			<p>Discover</p>
+		</div>
+		<% @articles.each do |article| %>
+		<div class="suggestion-wrapper">
+		<div class="suggestion">
+				<%= link_to(article) do %>
+					<% if @article.id != article.id %>
+						<div class="illu"> 
+							<%= image_tag article.image %>
+						</div>
+						<p><%= article.title %></p> 
+					<% end %> 
+				<% end %> 
+			</div>
+			</div>
+		<% end %> 
+	</div>
+</div> 

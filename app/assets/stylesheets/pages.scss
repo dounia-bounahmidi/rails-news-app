@@ -1,0 +1,333 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ** Categories pages ** */ 
+
+/* Title block */ 
+
+.intro {
+	width: 100%; 
+	height: 150px;
+	text-align: center;
+	padding: 5px;  
+	margin-bottom: 15px; 
+}
+
+.intro h1 {
+	font-size: 55px; 
+	margin: 50px auto; 
+}
+
+.intro h1 span {
+	color: #607F67; 
+	font-weight: 300; 
+}
+
+#serif {
+	font-family: 'Lora', serif;
+	color: black; 
+	font-weight: 700; 
+}
+
+/* The category's articles */ 
+
+.category-wrapper {
+	display: flex; 
+	width: 100%; 
+	height: auto; 
+	justify-content: space-between; 
+}
+
+.left-wrapper {
+	width: 70%;
+	height: auto; 
+	padding: 20px;  
+}
+
+.article {
+	display: flex; 
+	width: 100%; 
+	height: 250px; 
+	justify-content: space-between; 
+}
+
+.article .image {
+	width: 35%; 
+	height: 100%; 
+}
+
+.article .image img {
+	width: 100%; 
+	height: auto; 
+}
+
+.article .details {
+	width: 60%; 
+	height: auto; 
+	text-align: left; 
+	margin: 0; 
+	padding-top: 10px; 
+}
+
+.article .details p {
+	width: 100%; 
+	line-height: 15px; 
+}
+
+#author {
+	font-weight: bold; 
+	color: #607F67;
+}
+
+#title {
+	text-transform: uppercase; 
+	font-weight: 400; 
+	font-size: 18px; 
+}
+
+#brief {
+	font-weight: 300;
+}
+
+/* Subscribe banner */ 
+
+.right-wrapper {
+	width: 20%; 
+	height: 500px; 
+	background: #607F67; 
+}
+
+/* ** More stories page ** */ 
+
+.latest-header {
+	width: 100%; 
+	height: 100px; 
+	padding: 20px 0; 
+	text-align: center; 
+}
+
+.latest-header h1 {
+	font-size: 55px; 
+	font-family: 'Lora', serif;
+	font-weight: 400; 
+	margin: 0 auto; 
+}
+
+.latest-wrapper {
+	width: 100%; 
+	height: auto; 
+	text-align: center; 
+}
+
+.latest {
+	display: flex; 
+	width: 100%; 
+	justify-content: space-between; 
+	height: 300px; 
+}
+
+#author {
+	font-size: 12px; 
+	text-transform: uppercase; 
+}
+
+.latest .img {
+	width: 30%; 
+	height: 100%; 
+}
+
+.img img {
+	width: 100%; 
+	height: auto; 
+}
+
+.info {
+	width: 70%; 
+	height: 100%; 
+	text-align: left; 
+	padding-left: 50px; 
+}
+
+.pagination {
+	width: 100%; 
+	text-align: center; 
+}
+
+.pagintaion .current, .pagination .next {
+	border: 1px solid black; 
+	padding: 5px; 
+}
+
+@media screen and (min-width: 799px) and (max-width: 1100px) {
+	
+	.article {
+		height: 150px; 
+	}
+
+	#author {
+		margin-top: 0; 
+	}
+
+	#title {
+		font-size: 16px; 
+	}
+
+	.article .image {
+		width: 25%; 
+	}
+
+	.article .details {
+		padding-top: 0; 
+		width: 70%; 
+	}
+
+	.latest {
+		height: 200px; 
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+
+	.intro {
+		height: 80px; 
+	}
+
+	.intro h1 {
+		margin: auto; 
+	}
+	
+	.category-wrapper {
+		display: block; 
+	}
+
+	.left-wrapper {
+		width: 100%; 
+		padding-bottom: 0; 
+	}
+
+	.details p {
+		font-size: 13px; 
+	}
+
+	#brief {
+	 	max-width: 420px; 
+	}
+
+	.right-wrapper {
+		width: 100%; 
+		height: 100px; 
+	}
+
+	.latest {
+		display: block; 
+		height: auto; 
+		margin-bottom: 70px; 
+	}
+
+	.latest .img {
+		width: 80%; 
+		height: auto; 
+		margin: auto; 
+	}
+
+	.latest .img img {
+		width: 100%; 
+		height: auto; 
+		margin: auto; 
+	}
+
+	.latest .info {
+		width: 80%; 
+		height: 120px; 
+		padding: 0; 
+		margin: auto; 
+	}
+
+	.info p {
+		margin: 5px; 
+	}
+
+	.latest-header {
+		height: 50px; 
+		padding: 0 0 25px 0; 
+	}
+}
+
+@media screen and (max-width: 650px) {
+	
+	.intro {
+		height: 70px; 
+		padding: 0; 
+	}
+
+	.intro h1 {
+		margin: auto; 
+	}
+
+	.category-wrapper {
+		padding: 0; 
+	}
+
+	.left-wrapper {
+		padding: 0; 
+	}
+
+	.article {
+		text-align: center; 
+		display: block;  
+		height: auto; 
+		margin-bottom: 20px; 
+	}
+
+	.article .details {
+		margin: 5px auto; 
+		width: 80%; 
+		text-align: left; 
+	}
+
+	.details p {
+		margin: 5px; 
+	}
+
+	.article .image {
+		width: 80%; 
+		text-align: center; 
+		margin: auto; 
+	}
+
+	.image img {
+		padding: 0; 
+		margin: auto; 
+	}
+
+	.latest {
+		height: auto; 
+		margin-bottom: 120px; 
+	}
+
+	.latest .img {
+		height: auto; 
+	}
+}
+
+@media screen and (max-width: 350px) {
+	
+	.intro {
+		height: 50px; 
+	}
+
+	.intro h1 {
+		font-size: 35px; 
+	}
+}
+
+
+
+
+
+
+
+
+

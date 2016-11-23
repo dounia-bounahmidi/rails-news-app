@@ -1,0 +1,16 @@
+<div class="results-wrapper">
+	<% @articles.each do |article| %> 
+		<%= link_to(article) do %>
+			<div class="result">
+				<div class="pic">
+					<%= image_tag article.image %>
+				</div>
+				<div class="card">
+					<p><%= article.created_at.strftime('%b %d') %>, <%= article.created_at.strftime('%Y') %></p>
+					<h1><%= article.title %></h1>
+					<p><%= article.description %></p> 
+				</div>
+			</div>
+		<% end %> 
+	<% end %>
+</div>

@@ -1,0 +1,30 @@
+<div class="intro">
+	<h1><span id="serif">Artsy</span><span>Books</span></h1>
+</div>
+
+<div class="category-wrapper">
+	<div class="left-wrapper">
+		<% @articles.each do |article| %> 
+				<% if article.category == "Books" %>
+					<%= link_to(article) do %> 
+						<div class="article">
+							<div class="image">
+								<%= image_tag article.image %>
+							</div> 
+							<div class="details">
+								<p id="author">By <%= article.author %></p> 
+								<p id="title"><%= article.title %></p> 
+								<p id="dscription"><%= article.description %></p>
+							</div> 
+						</div> 
+				<% end %> 
+			 <% end %> 
+		<% end %> 
+	</div>
+
+
+	<div class="right-wrapper">
+
+	</div>
+</div>
+

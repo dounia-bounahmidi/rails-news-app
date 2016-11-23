@@ -1,0 +1,49 @@
+<% @articles.each do |article| %>
+	<% if article == @articles.first %> 
+		<%= link_to(article) do %>
+			<div class="hero-wrapper">
+				<div class="illustration">
+					<%= image_tag article.image %> 
+				</div>
+				<div class="details">
+					<p><span id="tag">Artsy</span><span id="categ"><%= article.category %></span></p> 
+					<h1><%= article.title %></h1>
+					<p id="description"><%= article.description %></p> 
+				</div>
+			</div>
+		<% end %> 
+	<% end %> 
+<% end %>
+
+<hr class="mobile-only">
+ 
+<div class="title">
+	<h6>Latest Picks</h6>
+</div>
+
+<div class="articles">
+	<% @articles.each do |article| %>
+		<% if article != @articles.first%> 
+			<%= link_to(article) do %>
+				<div class="article-wrapper">
+					<div class='image'>
+						<%= image_tag article.image %>
+					</div>
+					<p id="cat"><%= article.category %></p>
+					<h1><%= article.title %></h1>
+					<p><%= article.description %></p> 
+				</div>
+			<% end %> 
+		<% end %>  
+	<% end %> 
+</div>
+
+<div class="next">
+	<button><%= link_to "More stories", latest_path %></button>
+</div>
+
+<div class="newsletter">
+	<p>Join our weekly newsletter</p>
+	<%= render 'subscribers/new' %>
+</div>
+

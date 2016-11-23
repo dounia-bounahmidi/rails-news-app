@@ -1,0 +1,5 @@
+<%= form_for(@subscriber) do |f| %> 
+    <%= f.email_field :email, :placeholder => "email address", :id => "email" %> 
+    <%= f.submit 'Sign up', :id => "singup" %> 
+<% end %>
+

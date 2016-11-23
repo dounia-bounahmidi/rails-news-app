@@ -1,0 +1,23 @@
+<div class="latest-header">
+	<h1>Latest</h1>
+</div>
+
+<div class="latest-wrapper">
+	<% @articles.each do |article| %>
+		<div class="latest">
+			<div class="img">
+				<%= image_tag article.image %> 
+			</div>
+			<div class="info">
+				<p><%= article.created_at.strftime('%b %d') %>, <%= article.created_at.strftime('%Y') %></p> 
+				<h3><%= article.title %> </h3>
+				<p id="author">By <%= article.author %></p> 
+				<p><%= article.description %></p> 
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<div class="pages">
+	<%= will_paginate @articles %>
+</div> 

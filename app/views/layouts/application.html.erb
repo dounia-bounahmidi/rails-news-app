@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheArtsy</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Raleway:300,400,500" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/9c64063f1f.js"></script>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag :defaults %>
+  </head>
+
+  <body>
+
+    <div class="search-modal">
+      <div class="close">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="form-wrapper">
+      <%= form_tag search_articles_path, :method => 'get' do %> 
+        <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => 'input', :autofocus => true %>
+        <%= submit_tag " ", :id => "submit" %>
+      <% end %>
+      </div> 
+    </div>
+
+    <% if editor_signed_in? %>
+    <div class="editor-signout">
+          <p><%= link_to "Log out", destroy_editor_session_path, method: 'delete' %></p>
+    </div>
+    <% end %>
+
+  	<div class="header">
+  		<div class="header-wrapper">
+  			<p><%= link_to "The Artsy", root_path %></p>
+  			<i id="menu" class="fa fa-bars" aria-hidden="true"></i>
+  		</div>
+  	</div>
+
+    <div class="mobile-nav">
+        <ul>
+          <li id="inline"><i id="search-mobile" class="fa fa-search" aria-hidden="true"></i> <%= form_tag search_articles_path, :method => 'get' do %> <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => 'mobile' %></li>
+          <li id="search-submit"><%= submit_tag " " %></li> <% end %>
+          <li><%= link_to "Music", music_path %></li>
+          <li><%= link_to "Cinema", cinema_path %></li>
+          <li><%= link_to "Books", books_path %></li>
+          <li><%= link_to "Culinary Art", culinary_art_path %></li>
+          <li><%= link_to "Brands", brands_path %></li>
+          <li><%= link_to "Events", events_path %></li>
+        </ul>
+      </div> 
+
+  	<div class="navigation">
+  		<ul>
+  			<li><%= link_to "Music", music_path %></li>
+  			<li><%= link_to "Cinema", cinema_path %></li>
+  			<li><%= link_to "Books", books_path %></li>
+  			<li><%= link_to "Culinary Art", culinary_art_path %></li>
+  			<li><%= link_to "Brands", brands_path %></li>
+  			<li><%= link_to "Events", events_path %></li>
+        <li id="search"><i class="fa fa-search" aria-hidden="true"></i></li>
+  		</ul>
+    </div>
+
+    <hr> 
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+
+    <div class="footer">
+    	<div class="flex-wrapper">
+    		<ul>
+  				<li><%= link_to "Music", music_path %></li>
+  				<li><%= link_to "Cinema", cinema_path %></li>
+  				<li><%= link_to "Books", books_path %></li>
+  				<li><%= link_to "Culinary Art", culinary_art_path %></li>
+  				<li><%= link_to "Brands", brands_path %></li>
+  				<li><%= link_to "Events", events_path %></li> 
+  			</ul>
+  		</div>
+  		<div class="end">
+  			<p>&copy; the Artsy 2016 all rights reserved</p> 
+  		</div>
+    </div>
+
+  </body>
+</html>
